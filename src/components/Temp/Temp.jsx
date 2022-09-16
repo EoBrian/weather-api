@@ -1,4 +1,4 @@
-import React from 'react'
+import "./Temp.css"
 
 const Temp = ({data}) => {
 
@@ -27,7 +27,7 @@ const Temp = ({data}) => {
       <ul className="firecast">
         {
           forecast.forecastday[0].hour.map((e, i)=> (
-            <li key={i}>
+            <li key={i} className="grid">
               <p className="hour">{e.time}</p>
               <p>{e.temp_c}ºC</p>
               <figure>

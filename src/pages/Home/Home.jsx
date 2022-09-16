@@ -10,7 +10,7 @@ import Temp from "../../components/Temp/Temp"
 
 const Home = () => {
 
-  const [city, setCity] = useState(null)
+  const [city, setCity] = useState("Brasil")
   const {getData, data, isLoading, error} = useFetch()
 
 
@@ -29,7 +29,7 @@ const Home = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Sua cidade
-          <input type="text" onChange={e => setCity(e.target.value)} required/>
+          <input value={city} type="text" onChange={e => setCity(e.target.value)} required/>
         </label>
         <input className="btn" type="submit" value="search" />
       </form>
