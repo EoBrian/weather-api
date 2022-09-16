@@ -9,6 +9,18 @@
 
 @media  (min-width: 768px) {
   .card {
+    width: 70%;
+  }
+}
+
+@media  (min-width: 900px) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media  (min-width: 1024px) {
+  .card {
     width: 50%;
   }
 }
