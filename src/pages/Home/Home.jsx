@@ -17,7 +17,6 @@ const Home = () => {
   const handleSubmit = (e)=> {
     e.preventDefault()
     getData(city)
-    console.log(data)
   }
 
   if (isLoading) {
@@ -35,7 +34,7 @@ const Home = () => {
         <input className="btn" type="submit" value="search" />
       </form>
       <div className="card">
-        <Temp data={data} />
+        {data && data.length != 0 && <Temp data={data} />}
       </div>
     </article>
   )
