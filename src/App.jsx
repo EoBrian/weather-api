@@ -1,37 +1,18 @@
 //css
 import './App.css'
 
-//react-router-dom
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom"
-
-//components
-import MenuApp from './components/MenuApp/MenuApp'
-
 //pages
-import Home from './pages/Home/Home'
-import NotFound from './pages/NotFound'
+import Home from './pages/Home'
+
 
 
 function App() {
  
   return (
     <>
-      <Router>
-        <header className="menu-app">
-          <MenuApp/>
-        </header>
-
-        <main className="container">
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='*' element={<NotFound/>}/>            
-          </Routes>
-        </main>
-      </Router>
+      <main className="container">
+        <Home/>
+      </main>
     </>
   )
 }

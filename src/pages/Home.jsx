@@ -2,11 +2,11 @@
 import "./Home.css"
 
 //hooks
-import { useFetch } from "../../hooks/useFetch"
+import { useFetch } from "../hooks/useFetch"
 import { useState } from "react"
-import Loading from "../../components/Loading"
-import Error from "../../components/Error"
-import Temp from "../../components/Temp/Temp"
+import Loading from "../components/Loading"
+import Error from "../components/Error"
+import Temp from "../components/Temp/Temp"
 
 const Home = () => {
 
