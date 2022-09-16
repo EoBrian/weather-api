@@ -12,7 +12,7 @@ export const useFetch = ()=> {
    
   async function getData(city){
 
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=c103b13b6e09423b963204449221509&q=${city}&days=1`
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=c103b13b6e09423b963204449221509&q=${city}&days=1/`
     setError(null)
     setIsLoading(true)
 

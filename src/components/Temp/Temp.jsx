@@ -3,7 +3,7 @@ import "./Temp.css"
 const Temp = ({data}) => {
 
   const {location:state, current, forecast} = data
-
+  console.log(data)
   return (
     <>
       <div className="location">
