@@ -1,0 +1,14 @@
+.card {
+  width: 90%;
+  text-align: center;
+  background-color: #0d8ee4a6;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media  (min-width: 768px) {
+  .card {
+    width: 50%;
+  }
+}

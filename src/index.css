@@ -27,6 +27,11 @@ html, body, .container {
   background-size: 100%;
 }
 
+body {
+  background: url("https://cdn.pixabay.com/photo/2022/09/07/17/20/rogue-wave-7439216_960_720.jpg") no-repeat center;
+  background-size: cover;
+}
+
 a {
   display: inline-block;
 }
