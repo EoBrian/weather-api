@@ -14,6 +14,10 @@ const MenuApp = () => {
 
   return (
     <>
+     {/* colapse menu */}
+      <div className="menu-button" onClick={()=> menu? setMenu(false) : setMenu(true)}>
+        <img width={30} src={menu ? IconMenu : CloseMenu} alt="icone menu" />
+      </div>
       <div>
         <Link to="/">Logo</Link>
       </div>
@@ -22,12 +26,6 @@ const MenuApp = () => {
           <li><NavLink to="/">Home</NavLink></li>
         </ul>
       </nav>
-
-      {/* colapse menu */}
-      <div className="menu-button" onClick={()=> menu? setMenu(false) : setMenu(true)}>
-        <img width={30} src={menu ? IconMenu : CloseMenu} alt="icone menu" />
-      </div>
-      
     </>
   )
 }

@@ -2,44 +2,40 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-export const useFetch = (url, state)=> {
+export const useFetch = ()=> {
 
   const [isLoading, setIsLoading] = useState(null)
   const [error, setError] = useState(null)
   const [data, setData] = useState(new Array())
 
-  useEffect(()=> {
+
    
-    async function getData(){
+  async function getData(city){
 
-      setError(null)
-      setIsLoading(true)
-  
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=c103b13b6e09423b963204449221509&q=${city}&days=1&aqi=no&alerts=no`
+    setError(null)
+    setIsLoading(true)
 
-      try {
 
-        if (state === "GET") {
-          await axios.get(url)
-            .then( response => setData(response.data))
-        }
-  
-      } catch (error) {
-  
-        setError(error.message)
-  
-      } finally {
-  
-        setIsLoading(null)
-  
-      }
+    try {   
+
+      await axios.get(url)
+        .then( response => setData(response.data))
+
+    } catch (error) {
+
+      setError(error.message)
+
+    } finally {
+
+      setIsLoading(null)
+
     }
-
-    getData()
-
-  },[url, state])
+  }
 
 
   return {
+    getData,
     data,
     error,
     isLoading

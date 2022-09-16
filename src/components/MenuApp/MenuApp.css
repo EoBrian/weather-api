@@ -1,0 +1,21 @@
+.toggle-menu {
+  display: none;
+}
+
+.menu-button {
+  float: right;
+}
+
+nav ul {
+  margin-top: 10px;
+}
+
+.toggle-menu ul li {
+  display: block;
+}
+
+.menu-app {
+  padding: 20px;
+  background-color: #0d81ee85;
+  margin-bottom: 20px;
+}

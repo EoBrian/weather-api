@@ -25,12 +25,12 @@ function App() {
           <MenuApp/>
         </header>
 
-        <section className="container">
+        <main className="container">
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='*' element={<NotFound/>}/>            
           </Routes>
-        </section>
+        </main>
       </Router>
     </>
   )
