@@ -30,6 +30,9 @@ const Temp = ({data}) => {
             <li key={i}>
               <p className="hour">{e.time}</p>
               <p>{e.temp_c}ºC</p>
+              <figure>
+                <img src={e.condition.icon} alt={e.condition.text} />
+              </figure>
             </li>
           ))
         }
