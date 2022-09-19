@@ -6,7 +6,7 @@ import searchIcon from "../assets/search-outline.svg"
 
 //hooks
 import { useFetch } from "../hooks/useFetch"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Loading from "../components/Loading"
 import Error from "../components/Error"
 import Temp from "../components/Temp/Temp"
@@ -17,10 +17,13 @@ const Home = () => {
   const {getData, data, isLoading, error} = useFetch()
 
 
-  const handleSubmit = (e)=> {
-    e.preventDefault()
+  const handleSubmit = ()=> {
     getData(city)
   }
+
+  useEffect(()=> {
+    getData(city)
+  },[])
 
   if (isLoading) {
     return <Loading />

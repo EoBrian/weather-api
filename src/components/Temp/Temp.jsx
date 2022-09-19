@@ -15,7 +15,7 @@ const Temp = ({data}) => {
 
       <div className="current">
         <div className="condition">
-          <p>{current.condition.text}</p>
+          <p translate="yes">{current.condition.text}</p>
           <figure>
             <img src={current.condition.icon} alt="icon weather" />
             <p>{current.temp_c}ºC</p>
