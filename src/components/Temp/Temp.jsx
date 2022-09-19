@@ -27,12 +27,12 @@ const Temp = ({data}) => {
       <ul className="firecast">
         {
           forecast.forecastday[0].hour.map((e, i)=> (
-            <li key={i} className="grid">
-              <p className="hour">{e.time}</p>
+            <li key={i} className="grid">   
               <p>{e.temp_c}ºC</p>
               <figure>
                 <img src={e.condition.icon} alt={e.condition.text} />
               </figure>
+              <p className="hour">{e.time.split(" ")[1]}</p>
             </li>
           ))
         }
