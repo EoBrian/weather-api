@@ -31,11 +31,9 @@ const Home = () => {
 
       {error && <Error error={error} />}
 
-      <form>
-        <label>
-          Sua cidade
-          <input value={city} type="text" onChange={e => setCity(e.target.value)} required/>
-        </label>
+      <form className="flex">
+        <input value={city} type="text" onChange={e => setCity(e.target.value)} required/>
+   
         {/* <input className="btn" type="submit" value="search" /> */}
         <button className="btn">
           <img src={searchIcon} width="20" alt="" onClick={handleSubmit}/>
