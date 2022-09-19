@@ -32,7 +32,7 @@ const Home = () => {
       {error && <Error error={error} />}
 
       <form className="flex">
-        <input value={city} type="text" onChange={e => setCity(e.target.value)} required/>
+        <input value={city} type="text" onChange={e => setCity(e.target.value)} required placeholder="Busque por sua cidade..."/>
    
         {/* <input className="btn" type="submit" value="search" /> */}
         <button className="btn">

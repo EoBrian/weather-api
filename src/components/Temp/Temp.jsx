@@ -1,5 +1,6 @@
 import "./Temp.css"
 
+
 const Temp = ({data}) => {
 
   const {location:state, current, forecast} = data
@@ -25,7 +26,7 @@ const Temp = ({data}) => {
       <ul className="firecast">
         {
           forecast.forecastday[0].hour.map((e, i)=> (
-            <li key={i} className="grid">   
+            <li key={i} className={e.time.split(" ")[1].split(":")[0] >= 7 && e.time.split(" ")[1].split(":")[0] <= 18 ? "morning card-box" : "night card-box"}>  
               <p>{e.temp_c}ºC</p>
               <figure>
                 <img src={e.condition.icon} alt={e.condition.text} />
