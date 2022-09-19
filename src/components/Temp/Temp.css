@@ -1,6 +1,16 @@
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  margin-right: 10px;
+}
+
+.firecast {
+  display: flex;
+  overflow: scroll;
+}
+
+.night {
+
+}
+
+.morning {
   
-  border: 2px solid;
 }
