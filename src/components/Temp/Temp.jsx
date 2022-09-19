@@ -13,13 +13,11 @@ const Temp = ({data}) => {
       </div>
 
       <div className="current">
-        <div className="temp">
-          <p>{current.temp_c}ºC</p>
-        </div>
         <div className="condition">
           <p>{current.condition.text}</p>
           <figure>
             <img src={current.condition.icon} alt="icon weather" />
+            <p>{current.temp_c}ºC</p>
           </figure>
         </div>  
       </div>
