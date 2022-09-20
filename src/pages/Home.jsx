@@ -32,9 +32,7 @@ const Home = () => {
   return (
     <article className="flex column">
 
-      {error && <Error error={error} />}
-
-      <form className="flex">
+      <form className="flex" onSubmit={(e)=> e.preventDefault()}>
         <input value={city} type="text" onChange={e => setCity(e.target.value)} required placeholder="Busque por sua cidade..."/>
    
         {/* <input className="btn" type="submit" value="search" /> */}
@@ -43,9 +41,15 @@ const Home = () => {
         </button>
       </form>
 
-      <div className="card">
-        {data && data.length != 0 && <Temp data={data} />}
-      </div>
+      {
+        !error ? (
+          <div className="card">
+            {data && data.length != 0 && <Temp data={data} />}
+          </div>
+        ) : (
+          error && <Error error={error} />
+        )
+      }
 
     </article>
   )

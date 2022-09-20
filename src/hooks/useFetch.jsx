@@ -13,12 +13,14 @@ export const useFetch = ()=> {
   async function getData(city){
 
     const url = `https://api.weatherapi.com/v1/forecast.json?key=c103b13b6e09423b963204449221509&q=${city}&days=1`
+    const imgUrl = `https://pixabay.com/pt/images/search/${city}/?manual_search=1`
     setError(null)
     setIsLoading(true)
 
 
     try {   
 
+      //get data in weather API
       await axios.get(url)
         .then( response => setData(response.data))
 
