@@ -30,8 +30,7 @@ html, body, .container {
   min-height: 100vh;
 }
 
-body {
-  background: url("https://cdn.pixabay.com/photo/2022/09/07/17/20/rogue-wave-7439216_960_720.jpg") no-repeat center;
+.container {
   background-size: cover;
 }
 
